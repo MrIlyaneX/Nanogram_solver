@@ -1,0 +1,1 @@
+All nonogram files were taken from this source: https://github.com/mikix/nonogram-db/tree/master/db
