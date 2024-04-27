@@ -1,3 +1,5 @@
+# Use "pypy3 -mpip install -r requirements.txt" to run with modified PyPy (for plots)
+
 def main():
     """
 
@@ -12,11 +14,11 @@ def main():
     population_size: int = 1000
     generations: int = 1500
 
-    elitism_parameter: float = 0.1
+    elitism_parameter: float = 0.05
     not_improving_fitness_early_stopping: int = 100
     fitness_return: bool = True
 
-    plotting: bool = False  # turn False to use with PyPY
+    plotting: bool = True  # turn False to use with standard PyPY
 
     path: str = "db/col_row"
     loader = NonogramLoader(path)
@@ -57,7 +59,7 @@ def main():
                         print(' ', end=' ')
                 print()
             print("-------------------------")
-        # break
+        break
 
 
 if __name__ == '__main__':
