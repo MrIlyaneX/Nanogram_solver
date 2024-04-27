@@ -40,16 +40,12 @@ def parser(path: str) -> Tuple[int, int, List[List[int]], List[List[int]]]:
 
     width = int(''.join(i for i in find('width', '\n') if i.isdigit()))
     height = int(''.join(i for i in find('height', '\n') if i.isdigit()))
-    # print(width)
-    # print(height)
 
     col_clues_str: List[str] = find('columns', 'rows').split('\n')[1:-2]
     col_clues: List[List[int]] = [list(map(int, i.split(','))) for i in col_clues_str]
-    # print(col_clues)
 
     row_clues_str: List[str] = find('rows', 'goal').split('\n')[1:-1]
     row_clues: List[List[int]] = [list(map(int, i.split(','))) for i in row_clues_str]
-    # print(row_clues)
 
     return width, height, row_clues, col_clues
 
