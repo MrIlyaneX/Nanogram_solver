@@ -18,7 +18,7 @@ def main():
 
     plotting: bool = False  # turn False to use with PyPY
 
-    path: str = "../db/col_row"
+    path: str = "db/col_row"
     loader = NonogramLoader(path)
 
     for item in loader:
