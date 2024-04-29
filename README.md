@@ -1,12 +1,33 @@
-# Nonogram_solver
+# Nonogram solver using Genetic Algorithm
 
-This repository contains implementations of a nonogram solver using a genetic algorithm. 
-Nonograms are puzzles where you fill in cells in a grid based on the numbers given on the sides of the grid.
+Nonograms are puzzles where you fill in cells in a grid based on the numbers given on the sides of the grid (clues).
+This repository contains implementations of a nonogram solver using a genetic algorithm.
+Solver attempts to solve a given Nonogram puzzle, by saving the validity of row clues. 
 
-## Overview
 
-A genetic algorithm is used to solve nonograms, simulating the process of natural selection to evolve a population of potential solutions in the direction of the best one. 
-Two variants of the genetic algorithm are implemented here:
+### Tips for successful run
 
-List-based representation: Each individual in the population is represented as a list of lists, where each sublist represents a row or column in the grid.
-Bit string representation: Each individual in the population is represented as a bit string, where each bit represents a cell in the grid.
+It is recommended to use PyPy (should be installed for runnig following command)
+
+For MacOS, Linux run
+```commandline
+pypy3 -mpip install -r requirements.txt
+```
+For Windows
+```commandline
+pypy -mpip install -r requirements.txt
+```
+
+To run use
+```commandline
+pypy3 main.py
+```
+or
+```commandline
+pypy main.py
+```
+
+Using python:
+```commandline
+pip install -r requirements.txt
+```
