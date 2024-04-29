@@ -151,6 +151,9 @@ class NonogramSolverGA:
             if sum(self.row_clues[rand_row_index]) + len(self.row_clues[rand_row_index]) - 1 == self.columns:
                 continue
 
+            if sum(self.row_clues[rand_row_index]) == 0:
+                continue
+
             n = len(self.row_clues[rand_row_index])
             rand_word = random.randint(0, n - 1)  # random word in the row
             initial_index = positions[rand_row_index][rand_word]
