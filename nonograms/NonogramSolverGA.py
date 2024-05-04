@@ -1,6 +1,6 @@
 import random
 from typing import List
-
+from copy import deepcopy
 
 class NonogramSolverGA:
     def __init__(
@@ -133,6 +133,7 @@ class NonogramSolverGA:
         :return:
         """
         positions = []
+        individual = deepcopy(individual)
         for row in individual:
             position_i = []
             if row[0] == 1:
@@ -231,7 +232,7 @@ class NonogramSolverGA:
                 break
 
             # Select top individuals for reproduction (elitism)
-            elite = [individual for individual, _ in fitness_scores[:int(self.population_size * elitism_parameter)]]
+            elite = [deepcopy(individual) for individual, _ in fitness_scores[:int(self.population_size * elitism_parameter)]]
 
             # Generate offspring through crossover and mutation
             offspring = []
